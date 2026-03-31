@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-PortSwigger/Authentication-Bypass.md",
+                "file": "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Authentication-Bypass"
+              "title": "PortSwigger Academy SQL Injection (SQLi) Walkthrough"
             }
           }
         ]
@@ -186,10 +186,10 @@
   },
   "active": "1b3a81732d44c776",
   "lastOpenFiles": [
-    "README.md",
     "01-PortSwigger/SQL Injection Vulnerability Allowing Login Bypass.md",
-    "01-PortSwigger/Retrieve Hidden Data (SQL Injection).md",
-    "01-PortSwigger/Authentication-Bypass.md",
+    "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
+    "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
+    "README.md",
     "Assets/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
     "Screenshot 2026-03-31 001351.png",
     "Screenshot 2026-03-31 000819.png",
