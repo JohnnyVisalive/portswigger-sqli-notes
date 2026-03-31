@@ -186,6 +186,7 @@
   },
   "active": "1b3a81732d44c776",
   "lastOpenFiles": [
+    "README.md",
     "01-PortSwigger/SQL Injection Vulnerability Allowing Login Bypass.md",
     "01-PortSwigger/Retrieve Hidden Data (SQL Injection).md",
     "01-PortSwigger/Authentication-Bypass.md",
