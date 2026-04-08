@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-TryHackMe/# TryHackMe Junior Security Analyst Intro.md",
+                "file": "05-Tools/KQL, Defender and Sentinel Dataview & Syntax Cheat Sheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "# TryHackMe Junior Security Analyst Intro"
+              "title": "KQL, Defender and Sentinel Dataview & Syntax Cheat Sheet"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "1b3a81732d44c776",
   "lastOpenFiles": [
-    "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
     "02-TryHackMe/# TryHackMe Junior Security Analyst Intro.md",
+    "05-Tools/KQL, Defender and Sentinel Dataview & Syntax Cheat Sheet.md",
+    "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
     "04-Payloads/SQLi Payload Master Reference.md",
     "01-PortSwigger/SQL Injection Vulnerability Allowing Login Bypass.md",
     "README.md",
