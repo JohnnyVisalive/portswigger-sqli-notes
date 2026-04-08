@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
+                "file": "02-TryHackMe/# TryHackMe Junior Security Analyst Intro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PortSwigger Academy SQL Injection (SQLi) Walkthrough"
+              "title": "# TryHackMe Junior Security Analyst Intro"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "1b3a81732d44c776",
   "lastOpenFiles": [
-    "04-Payloads/SQLi Payload Master Reference.md",
     "01-PortSwigger/PortSwigger Academy SQL Injection (SQLi) Walkthrough.md",
+    "02-TryHackMe/# TryHackMe Junior Security Analyst Intro.md",
+    "04-Payloads/SQLi Payload Master Reference.md",
     "01-PortSwigger/SQL Injection Vulnerability Allowing Login Bypass.md",
     "README.md",
     "Assets/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
