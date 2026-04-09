@@ -125,4 +125,7 @@ I am actively building hands-on experience through structured labs and self-dire
 
 All testing and exploitation described in this repository was performed in **legal, controlled training environments provided by PortSwigger Web Security Academy**.
 
+<<<<<<< HEAD
+No real-world systems were accessed or affected.
+=======
 No real-world systems were accessed or affected.
