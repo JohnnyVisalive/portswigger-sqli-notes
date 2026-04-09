@@ -11,14 +11,14 @@
             "id": "1b3a81732d44c776",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "README.md",
-                "bFile": "README.md",
-                "aRef": ""
+                "file": "02-TryHackMe/TryHackMe Junior Security Analyst Intro.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff: README"
+              "icon": "lucide-file",
+              "title": "TryHackMe Junior Security Analyst Intro"
             }
           }
         ]
