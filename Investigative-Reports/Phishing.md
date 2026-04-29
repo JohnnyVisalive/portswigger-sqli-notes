@@ -32,7 +32,7 @@ date: 2026-04-29
 - [x] Initial analysis of headers/sender info.
 - [x] Verification of legitimate Indeed communication channels.
 - [x] Blocked sender phone number.
-- [x] Flagged/Reported to Indeed Security.
+- [x] Flagged/Reported.
 - [x] Documented in Obsidian Vault for TTP tracking.
 
 ## 5. Related TTPs (MITRE ATT&CK)
