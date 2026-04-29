@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-TryHackMe/TryHackMe Junior Security Analyst Intro.md",
+                "file": "Investigative-Reports/Phishing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TryHackMe Junior Security Analyst Intro"
+              "title": "Phishing"
             }
           }
         ]
@@ -180,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,6 +198,8 @@
   "active": "1b3a81732d44c776",
   "lastOpenFiles": [
     "02-TryHackMe/TryHackMe Junior Security Analyst Intro.md",
+    "Investigative-Reports/Phishing.md",
+    "Investigative-Reports",
     "README.md",
     "conflict-files-obsidian-git.md",
     "Assets/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
